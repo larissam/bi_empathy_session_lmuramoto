@@ -1,6 +1,9 @@
 connection: "cloud-bi-empathy-session"
 
-include: "/views/*.view.lkml"                # include all views in the views/ folder in this project
+include: "/views/distribution_centers.view.lkml"                # include all views in the views/ folder in this project
+include: "/views/inventory_items.view.lkml"                # include all views in the views/ folder in this project
+include: "/views/order_items.view.lkml"                # include all views in the views/ folder in this project
+
 
 # include: "/**/*.view.lkml"                 # include all views in this project
 # include: "my_dashboard.dashboard.lookml"   # include a LookML dashboard called my_dashboard
