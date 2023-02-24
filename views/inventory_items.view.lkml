@@ -86,4 +86,24 @@ view: inventory_items {
     type: count
     drill_fields: [id, product_name, order_items.count]
   }
+
+  measure: avg_profit {
+    type:  average
+    sql: ${order_items.sale_price} - ${cost} ;;
+  }
+
+  measure: total_profit {
+    type:  sum
+    sql:  ${order_items.sale_price} - ${cost} ;;
+  }
+
+  measure: avg_cost {
+    type:  average
+    sql:  ${cost} ;;
+  }
+
+  measure: total_cost {
+    type: sum
+    sql:  ${cost} ;;
+  }
 }

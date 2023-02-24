@@ -14,6 +14,7 @@ include: "/views/*.view.lkml"                # include all views in the views/ f
 # # and define the joins that connect them together.
 #
 explore: order_items {
+  label: "Larissa's explore"
   join: inventory_items {
     relationship: many_to_one
     sql_on: ${order_items.product_id} = ${inventory_items.product_id} ;;
